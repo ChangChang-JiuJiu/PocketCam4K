@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="熄屏">
+    <title>熄屏</title>
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%2308080a'/><circle cx='90' cy='90' r='60' fill='none' stroke='%23ff9500' stroke-width='4' stroke-opacity='0.35'/><path d='M90 48 L90 88 M64 62 A42 42 0 1 0 116 62' fill='none' stroke='%23ff9500' stroke-width='10' stroke-linecap='round'/></svg>">
+    <style>
+        body { background: #000000; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 92vh; margin: 0; padding: 20px; text-align: center; }
+        .card { background: #141416; border: 1px solid #2c2c2e; border-radius: 18px; padding: 22px; max-width: 340px; }
+        h2 { color: #ff9f0a; margin-top: 0; font-size: 20px; }
+        p { color: #d1d1d6; font-size: 14px; line-height: 1.6; text-align: left; }
+        .arrow { font-size: 28px; margin-top: 16px; color: #ff9f0a; }
+    </style>
+    <script>
+        // 无论是从桌面打开还是直接访问，立即自动拉起 App 进入熄屏录像，无需二次点击
+        window.location.replace("pocketcam4k://blackout");
+        setTimeout(function() {
+            var guide = document.getElementById("guide");
+            if (guide) guide.style.display = "block";
+        }, 600);
+    </script>
+</head>
+<body>
+    <div id="guide" style="display:none;">
+        <div class="card">
+            <h2>📲 添加「熄屏」到桌面</h2>
+            <p>1. 若弹出“在闪拍4K中打开”，首次添加请先点<b>「取消」</b>留在当前页<br>
+            2. 点击浏览器底部中间的 <b>「分享按钮 📤」</b><br>
+            3. 选择 <b>「添加到主屏幕」</b> → 点右上角<b>「添加」</b>（名字已默认设为<b>「熄屏」</b>）</p>
+        </div>
+        <div class="arrow">⬇️ 点底部中间「分享 📤」添加到主屏幕</div>
+    </div>
+</body>
+</html>

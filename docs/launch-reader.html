@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="每日阅读">
+    <title>每日阅读</title>
+    <style>
+        body { background: #0f0f12; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 92vh; margin: 0; padding: 20px; text-align: center; }
+        .card { background: #1c1c1e; border: 1px solid #32ade6; border-radius: 18px; padding: 24px; max-width: 340px; }
+        h2 { color: #32ade6; margin-top: 0; }
+        p { color: #d1d1d6; font-size: 15px; line-height: 1.6; }
+        .btn { display: inline-block; margin-top: 14px; background: #32ade6; color: #000; font-weight: bold; padding: 12px 24px; border-radius: 99px; text-decoration: none; }
+        .arrow { font-size: 32px; margin-top: 20px; animation: bounce 1.2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+    </script>
+    <script>
+        window.onload = function() {
+            var isStandalone = window.navigator.standalone === true || window.location.search.indexOf("autolaunch=1") !== -1;
+            if (isStandalone) {
+                window.location.replace("pocketcam4k://reader");
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="card">
+        <h2>📖 添加「每日阅读」伪装图标到桌面</h2>
+        <p>1. 点击浏览器最底部的 <strong>「分享按钮 📤」</strong><br>
+        2. 往下滑点击 <strong>「添加到主屏幕」</strong><br>
+        3. 点击右上角「添加」，桌面上就会出现一个名为「每日阅读」的图标，点开它立即进入小说全屏阅读并自动在底层录制 4K 视频！</p>
+        <a class="btn" href="pocketcam4k://reader">立即测试启动阅读抓拍</a>
+    </div>
+    <div class="arrow">⬇️ 点击底部中间分享按钮 📤</div>
+</body>
+</html>
